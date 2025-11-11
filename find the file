@@ -1,0 +1,13 @@
+try:
+    filename = input("Enter file name: ")
+
+    with open(filename, "r") as file:
+        print("File found! Printing content line by line:")
+        line_number = 1
+
+        for line in file:
+            print(f"Line {line_number}: {line.strip()}")
+            line_number += 1
+
+except FileNotFoundError:
+    print(f"The file {filename } doesn't exist.")
